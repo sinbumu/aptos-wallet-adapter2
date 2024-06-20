@@ -33,7 +33,7 @@ First, run the development server:
 npm run dev
 # or
 yarn dev
-# or
+# orpnpm dev
 pnpm dev
 # or
 bun dev

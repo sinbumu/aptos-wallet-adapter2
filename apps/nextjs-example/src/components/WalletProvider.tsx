@@ -12,12 +12,14 @@ import { PropsWithChildren } from "react";
 import { Network } from "@aptos-labs/ts-sdk";
 import { useAutoConnect } from "./AutoConnectProvider";
 import { useToast } from "./ui/use-toast";
+import { BlockoWallet } from "./BlockoWallet";
 
 export const WalletProvider = ({ children }: PropsWithChildren) => {
   const { autoConnect } = useAutoConnect();
   const { toast } = useToast();
 
   const wallets = [
+    new BlockoWallet(),
     new BitgetWallet(),
     new FewchaWallet(),
     new MartianWallet(),
